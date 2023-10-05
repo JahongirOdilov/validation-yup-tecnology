@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Homework</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<form>
+			<div class="input">
+				<label for="brand">Brand name(in English)</label>
+				<input id="brand" type="text" placeholder="Brand name (in English)" />
+				<div class="invalid1 danger"></div>
+			</div>
+			<div class="input">
+				<label for="name">Description (optional)</label>
+				<input id="name" type="text" placeholder="Description" />
+				<div class="invalid2 danger"></div>
+			</div>
+			<div class="input">
+				<label for="web">Website(URL)</label>
+				<input id="web" type="text" placeholder="Website (URL)" />
+				<div class="invalid3 danger"></div>
+			</div>
+			<div class="input">
+				<label for="country">Country</label>
+				<select id="country">
+					<option value="Uzbekistan">Uzbekistan 🇺🇿</option>
+					<option value="United States">United States 🇺🇸</option>
+					<option value="Russia">Russia 🇷🇺</option>
+					<option value="Kazakistan">Kazakistan 🇰🇿</option>
+				</select>
+				<div class="invalid4 danger"></div>
+			</div>
+			<div class="input">
+				<label for="category">Category</label>
+				<select id="category">
+					<h1 class="categ" value="Categories">Categories</h1>
+					<option value="Customer Success">Customer Success</option>
+					<option value="Dev Ops">Dev Ops</option>
+					<option value="Data Analytics">Data Analytics</option>
+					<option value="Finance">Finance</option>
+					<option value="Productivity Tools">Productivity Tools</option>
+					<option value="People & HR">People & HR</option>
+					<option value="Product">Product</option>
+					<option value="Others">Others</option>
+				</select>
+				<div class="invalid5 danger"></div>
+			</div>
+			<button class="click">NEXT</button>
+		</form>
+	</body>
+</html>
