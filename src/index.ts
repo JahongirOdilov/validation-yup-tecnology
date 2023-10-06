@@ -10,15 +10,8 @@ const form: HTMLFormElement = document.querySelector("form")!;
 const invalid1: HTMLDivElement = document.querySelector(".invalid1")!;
 const invalid2: HTMLDivElement = document.querySelector(".invalid2")!;
 const invalid3: HTMLDivElement = document.querySelector(".invalid3")!;
-const invalid4: HTMLDivElement = document.querySelector(".invalid4")!;
-const invalid5: HTMLDivElement = document.querySelector(".invalid5")!;
-// const countrySelect: NodeListOf<HTMLOptionElement> = document.querySelectorAll("option")!;
-// const inputElms: NodeListOf<HTMLInputElement> = document.querySelectorAll("input")!;
-// const selectsElms: NodeListOf<HTMLSelectElement> = document.querySelectorAll("select")!;
-// const categ: NodeListOf<HTMLOptionElement> = document.querySelectorAll("option")!;
-// const value: string = countrySelect.value;
-// console.log(value);
-
+// const invalid4: HTMLDivElement = document.querySelector(".invalid4")!;
+// const invalid5: HTMLDivElement = document.querySelector(".invalid5")!;
 const schema = yup.object().shape({
 	brand: yup
 		.string()
@@ -33,6 +26,7 @@ const schema = yup.object().shape({
 	category: yup.string().required("Category is required"),
 });
 
+const engRegex = /^[A-Za-z\s]+$/;
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
 
@@ -52,13 +46,13 @@ form.addEventListener("submit", (e) => {
 		.validate(formData)
 		.then(() => {})
 		.catch((error) => {
-			if (error.path === "brand" || brand.value === "") {
+			if (error.path === "brand" || brand.value === "" || !engRegex.test(brand.value)) {
 				brand.style.border = "2px solid red";
-				invalid1.innerText = "Please enter correct [a-z,A-Z]";
+				invalid1.innerText = "Please enter only English letters";
 			}
-			if (error.path === "name" || name.value === "") {
+			if (error.path === "name" || name.value === "" || !engRegex.test(name.value)) {
 				name.style.border = "2px solid red";
-				invalid2.innerText = "Please enter correct [a-z,A-Z]";
+				invalid2.innerText = "Please enter only English letters";
 			}
 			if (error.path === "web" || web.value === "") {
 				web.style.border = "2px solid red";

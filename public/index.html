@@ -19,7 +19,7 @@
 				<div class="invalid1 danger"></div>
 			</div>
 			<div class="input">
-				<label for="name">Description (optional)</label>
+				<label for="name">Description (required)</label>
 				<input id="name" type="text" placeholder="Description" />
 				<div class="invalid2 danger"></div>
 			</div>
@@ -31,6 +31,7 @@
 			<div class="input">
 				<label for="country">Country</label>
 				<select id="country">
+					<option value="Uzbekistan" disabled selected>Country</option>
 					<option value="Uzbekistan">Uzbekistan 🇺🇿</option>
 					<option value="United States">United States 🇺🇸</option>
 					<option value="Russia">Russia 🇷🇺</option>
@@ -41,7 +42,7 @@
 			<div class="input">
 				<label for="category">Category</label>
 				<select id="category">
-					<h1 class="categ" value="Categories">Categories</h1>
+					<option value="Category" disabled selected>Category</option>
 					<option value="Customer Success">Customer Success</option>
 					<option value="Dev Ops">Dev Ops</option>
 					<option value="Data Analytics">Data Analytics</option>

@@ -60,3 +60,11 @@ select:focus {
 .danger {
 	color: red;
 }
+
+.click {
+	width: 200px;
+	height: 40px;
+	background: none;
+	border-radius: 20px;
+	font-size: 20px;
+}
